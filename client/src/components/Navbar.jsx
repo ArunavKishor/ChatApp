@@ -19,34 +19,41 @@ const NavBar = () => {
   }, []);
 
   return (
-    <>
-      <div className="bg-primary flex justify-between px-5 py-2 z-99">
-        <h1 className="text-xl font-bold">Chit-Chat</h1>
+    <nav className="bg-primary px-6 py-3 shadow-md">
+      <div className="flex items-center justify-between max-w-7xl mx-auto">
+        {/* Logo */}
+        <h1 className="text-2xl font-extrabold tracking-wide cursor-pointer">
+          Chit<span className="text-secondary">-Chat</span>
+        </h1>
 
-        <div className="flex gap-3">
-          <span>Home</span>
-          <span>About</span>
+        {/* Links */}
+        <div className="hidden md:flex gap-6 text-sm font-medium">
+          <span className="cursor-pointer hover:text-secondary transition">
+            Home
+          </span>
+          <span className="cursor-pointer hover:text-secondary transition">
+            About
+          </span>
         </div>
 
-        <div className="flex gap-3">
+        {/* Actions */}
+        <div className="flex items-center gap-3">
           <button
-            className="btn btn-secondary btn-gradient"
+            className="btn btn-secondary btn-sm px-5"
             onClick={() => navigate("/login")}
           >
             Login
           </button>
 
           <button
-            className="btn btn-secondary btn-gradient"
+            className="btn btn-outline btn-sm px-5"
             onClick={() => navigate("/register")}
           >
             Register
           </button>
 
           <select
-            name="theme"
-            id="theme"
-            className="select"
+            className="select select-bordered select-sm min-w-[130px]"
             onChange={handleThemeChange}
             value={theme}
           >
@@ -70,7 +77,7 @@ const NavBar = () => {
           </select>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

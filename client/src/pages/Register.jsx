@@ -51,10 +51,7 @@ const Register = () => {
       Error.mobileNumber = "Only Indian mobile numbers allowed";
     }
 
-    if (formData.password.length < 6) {
-      Error.password = "Password must be at least 6 characters";
-    }
-
+    // ✅ Only password match check
     if (formData.password !== formData.confirmPassword) {
       Error.confirmPassword = "Passwords do not match";
     }
@@ -90,7 +87,6 @@ const Register = () => {
       <div className="w-full max-w-xl">
         <div className="card bg-base-100 shadow-xl">
           <div className="card-body">
-            {/* Header */}
             <h2 className="card-title text-3xl justify-center text-primary">
               Register
             </h2>
@@ -151,17 +147,23 @@ const Register = () => {
                 className="input input-bordered w-full"
               />
 
-              <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Confirm Password"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                disabled={isLoading}
-                className="input input-bordered w-full"
-              />
+              <div>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  disabled={isLoading}
+                  className="input input-bordered w-full"
+                />
+                {validationError.confirmPassword && (
+                  <p className="text-error text-sm">
+                    {validationError.confirmPassword}
+                  </p>
+                )}
+              </div>
 
-              {/* Buttons */}
               <div className="flex gap-3 pt-6">
                 <button
                   type="reset"

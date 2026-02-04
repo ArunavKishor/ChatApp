@@ -12,16 +12,10 @@ const App = () => {
         <Toaster />
         <Navbar />
         <Routes>
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} /> */}
+          
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/register" element={<Register />} />
-          <Route path="/user-dashboard" element={<UserDashboard/>}/>
-          <Route path="/rider-dashboard" element={<RiderDashboard/>}/>
-          <Route path="/restaurant-dashboard" element={<RestaurantDashboard/>}/>
-            <Route path="/admin-dashboard" element={<AdminDashboard/>}/> */}
+          
         </Routes>
       </BrowserRouter>
     </>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import api from "../config/api"
+import api from "../config/api";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -32,10 +32,7 @@ const Login = () => {
       toast.success(res.data.message);
 
       // optional: store user or token
-      sessionStorage.setItem(
-        "AppUser",
-        JSON.stringify(res.data.data),
-      );
+      sessionStorage.setItem("AppUser", JSON.stringify(res.data.data));
 
       handleClearForm();
 
