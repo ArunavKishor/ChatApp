@@ -23,7 +23,7 @@ const NavBar = () => {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <h1 className="text-2xl font-extrabold tracking-wide cursor-pointer">
-          Chit<span className="text-secondary">-Chat</span>
+          Data-Transfer
         </h1>
 
         {/* Links */}

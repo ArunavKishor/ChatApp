@@ -91,7 +91,7 @@ const Register = () => {
               Register
             </h2>
             <p className="text-center text-base-content/70 mb-6">
-              Just one step away 🚀
+              Hello New User 🫡
             </p>
 
             <form
