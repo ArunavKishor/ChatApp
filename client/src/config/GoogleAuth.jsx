@@ -46,7 +46,7 @@ export const useGoogleAuth = () => {
         script.onerror = (error) => {
           console.error(
             "Failed to load Google Identity Services script:",
-            error
+            error,
           );
           setError("Failed to load Google Identity Services");
           setIsLoading(false);
